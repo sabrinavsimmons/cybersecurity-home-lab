@@ -1,4 +1,0 @@
-Sample Network Config:
-- vmbr0: Management
-- vmbr1: Monitor
-- Static IPs...
