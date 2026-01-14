@@ -1,3 +1,0 @@
-1. Kali Linux - 192.168.8.20
-2. Metasploitable2 - 192.168.8.25
-3. Security Onion - 192.168.8.50
