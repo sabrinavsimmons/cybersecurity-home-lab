@@ -66,7 +66,7 @@ Proxmox      Wazuh  Security    │   Kali   Metasploitable Windows
 - **Firewall:** Lenovo ThinkCentre M910q (pfSense)
 - **Hypervisor:** Lenovo ThinkCentre M720q (Proxmox VE - 32GB RAM, 256GB NVMe + 931GB SSD)
 - **Router:** GL.iNet GL-BE3600
-- **Switch:** Netgear 12-port
+- **Switch:** Netgear 8-port
 - **DNS/Ad-Block:** Raspberry Pi 5 (Pi-hole, mounted behind rack) 
 - **Rack:** Custom rack mount with cable management
 
