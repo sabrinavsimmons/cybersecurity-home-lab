@@ -84,7 +84,8 @@ Proxmox      Wazuh  Security    │   Kali   Metasploitable Windows
 ### Phase Documentation
 - **[Phase 1 Complete Documentation](docs/Phase1-Complete-Documentation.md)** - Network infrastructure, routing, and firewall implementation
 - **[Phase 2 Migration Analysis](docs/Phase2-Migration-Plan.md)** - Attempted migration and architectural constraint discovery
-- **[Phase 3 SOC Deployment](docs/Phase3-SOC-Deployment.md)** - ⭐ **Security Operations Center implementation with full detection pipeline**
+- **[Phase 3 SOC Deployment](docs/Phase3-SOC-Deployment.md)** - Security Operations Center implementation with full detection pipeline
+- **[Phase 3 Enhancements](docs/Phase3-Enhancements.md)** - ⭐ **NEW** Automation, troubleshooting, and detection validation
 
 ### Additional Resources
 - **[Quick Start Guide](docs/Quick-Start.md)** - Essential commands and access information
@@ -142,6 +143,10 @@ Proxmox      Wazuh  Security    │   Kali   Metasploitable Windows
 - ✅ **Attack simulation and detection validation** with confirmed visibility
 - ✅ **Storage capacity planning** and enterprise troubleshooting
 - ✅ **Defense-in-depth architecture** with network and endpoint layers
+- ✅ **OVS mirror automation** via systemd service (auto-creates on boot)
+- ✅ **Network-wide ad blocking** via pfSense → Pi-hole forwarding chain
+- ✅ **Host-based command monitoring** with auditd integration
+- ✅ **Proxmox stability fixes** (boot service troubleshooting)
 
 ---
 
@@ -216,18 +221,25 @@ Successfully implemented persistent static routes using OpenWRT's UCI system, en
 
 ## 🚀 Future Enhancements
 
+### Completed ✅
+- [x] OVS mirror automation (systemd service)
+- [x] Network-wide ad blocking (pfSense + Pi-hole)
+- [x] Detection pipeline validation with attack simulations
+- [x] Auditd configuration for command monitoring
+
 ### Immediate (Next Phase)
 - [ ] pfSense log forwarding to Security Onion
 - [ ] Pi-hole DNS logging integration with SIEM
 - [ ] Custom Suricata rules for lab-specific threats
 - [ ] Automated attack scenarios for continuous testing
-- [ ] Wazuh vulnerability detection configuration
+- [ ] Wazuh vulnerability detection size limits
+- [ ] Custom Wazuh decoders for audit logs
 
 ### Short-term
 - [ ] Add Splunk or ELK stack for SIEM comparison
 - [ ] YARA rules for malware detection
 - [ ] File integrity monitoring baselines
-- [ ] Custom Wazuh decoders and correlation rules
+- [ ] Custom Wazuh correlation rules
 - [ ] Network behavior anomaly detection (Zeek scripts)
 
 ### Long-term
@@ -236,8 +248,6 @@ Successfully implemented persistent static routes using OpenWRT's UCI system, en
 - [ ] Red team vs. blue team scenarios
 - [ ] Compliance reporting (CIS benchmarks)
 - [ ] Machine learning-based anomaly detection
-
----
 
 ---
 
@@ -384,10 +394,11 @@ Documentation and configuration examples are provided as-is for educational purp
 - **January 11, 2026** - Phase 1: Network infrastructure implementation (~8 hours)
 - **January 13, 2026** - Phase 2: Migration attempt and analysis (~3 hours)
 - **January 22-26, 2026** - Phase 3: SOC deployment and validation (~15 hours)
+- **January 30, 2026** - Phase 3 Enhancements: Automation and validation (~2 hours)
 
-**Total Investment:** ~26 hours of hands-on implementation and learning
+**Total Investment:** ~28 hours of hands-on implementation and learning
 
-**Documentation:** 90+ pages of comprehensive technical documentation
+**Documentation:** 120+ pages of comprehensive technical documentation
 
 ---
 
@@ -416,7 +427,7 @@ Documentation and configuration examples are provided as-is for educational purp
 
 **Defense-in-Depth:** Implemented layered security with network monitoring (Security Onion) and endpoint detection (Wazuh agents) providing complementary visibility.
 
-**Comprehensive Documentation:** 150+ pages of technical documentation covering implementation, troubleshooting, lessons learned, and career relevance.
+**Comprehensive Documentation:** 120+ pages of technical documentation covering implementation, troubleshooting, lessons learned, and career relevance.
 
 **Production-Grade Tools:** Not toy projects - deployed enterprise security platforms (Security Onion, Wazuh) used in real SOC environments.
 
